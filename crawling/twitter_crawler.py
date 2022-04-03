@@ -3,6 +3,9 @@ import os
 import json
 import requests
 
+from utils import save_json
+
+
 # Load Twitter API secrets from an external JSON file
 local_secrets_path = 'config/local_twitter_crawl_api_keys.json'
 secrets = json.loads(open(local_secrets_path).read())
@@ -10,45 +13,41 @@ bearer_token = secrets['bearer_token']
 
 
 def create_bearer_oauth_headers(bearer_token):
-    headers = {"Authorization": "Bearer {}".format(bearer_token)}
+    headers = {'Authorization': 'Bearer {}'.format(bearer_token)}
     return headers
 
 
 def create_url(keyword, max_results):
     # https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query#adding-a-query
+
     # One common query clause is -is:retweet, which will not match on Retweets,
     # thus matching only on original Tweets, Quote Tweets, and replies.
 
     # Query for english original tweets that contains a specific keyword and has geo-location
     if keyword.startswith('#'):  # encode the hashtag for url
-        query = "%23{} -is:retweet lang:en".format(keyword[1:])
+        query = '%23{} -is:retweet lang:en'.format(keyword[1:])
     else:
-        query = "{} -is:retweet lang:en".format(keyword)
-    tweet_fields = "tweet.fields=author_id,created_at,geo,lang"
-    user_fields = 'user.fields=id,name,location'
-    expansions = "expansions=author_id"
-    url = "https://api.twitter.com/2/tweets/search/recent?query={}&{}&{}&{}&max_results={}".format(
+        query = '{} -is:retweet lang:en'.format(keyword)
+    tweet_fields = 'tweet.fields=author_id,created_at,geo,lang'
+    # user_fields = 'user.fields=id,name,location'
+    # expansions = 'expansions=author_id'
+    url = 'https://api.twitter.com/2/tweets/search/recent?query={}&{}&max_results={}'.format(
         query,
         tweet_fields,
-        user_fields,
-        expansions,
+        # user_fields,
+        # expansions,
         max_results
     )
     return url
 
 
 def connect_to_endpoint(url, headers):
-    response = requests.request("GET", url, headers=headers)
+    response = requests.request('GET', url, headers=headers)
     # print(response.status_code)
     if response.status_code != 200:
         print(response.status_code)
         raise Exception(response.status_code, response.text)
     return response.json()
-
-
-def save_json(file_path, file_content, ensure_ascii=False, indent=4, sort_keys=False):
-    with open(file_path, 'w', encoding='utf-8') as file:
-        json.dump(file_content, file, ensure_ascii=ensure_ascii, indent=indent, sort_keys=sort_keys)
 
 
 def crawl_keyword(keyword, headers, max_results=100, num_pages=50):
@@ -76,7 +75,7 @@ def crawl_keyword(keyword, headers, max_results=100, num_pages=50):
         try:
             json_response = connect_to_endpoint(next_url, headers)
         except requests.exceptions.RequestException as e:
-            print("crawl_keyword ERROR!")
+            print('crawl_keyword ERROR!')
             print(e)
 
         # print(len(json_response['data']))
@@ -87,9 +86,9 @@ def crawl_keyword(keyword, headers, max_results=100, num_pages=50):
 
         crawled_data.extend(json_response['data'])
 
-        metadata = json_response["meta"]
+        metadata = json_response['meta']
         # there is no next page
-        if "next_token" not in metadata:
+        if 'next_token' not in metadata:
             break
 
     return crawled_data
@@ -103,10 +102,10 @@ def start_keyword_crawls(keywords, output_dir, headers):
         keyword_data['data'].extend(crawled_data)
 
         print()
-        print("{} Records Crawled for keyword {}".format(str(len(keyword_data['data'])), keyword))
-        print("-" * 30)
+        print('{} Records Crawled for keyword {}'.format(str(len(keyword_data['data'])), keyword))
+        print('-' * 30)
         print()
-        save_json(os.path.join(output_dir, "{}_crawled.json".format(keyword)), keyword_data)
+        save_json(os.path.join(output_dir, '{}_crawled.json'.format(keyword)), keyword_data)
 
 
 def main():
@@ -124,9 +123,9 @@ def main():
 
         start_keyword_crawls(keywords=keywords, output_dir='crawled_data/', headers=headers)
     except Exception as e:
-        print("[twitter_crawler]: Error in twitter_crawler.py!")
+        print('[twitter_crawler]: Error in twitter_crawler.py!')
         print(e)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
