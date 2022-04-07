@@ -24,7 +24,7 @@ def main():
 
     cleaned_data = list(tweets.values())
 
-    print('{} records in total!'.format(len(cleaned_data)))  # 66862 records in total!
+    print('{} records in total!'.format(len(cleaned_data)))  # 66,862 records in total!
 
     save_json('cleaned_data/cleaned_data.json', cleaned_data)
 

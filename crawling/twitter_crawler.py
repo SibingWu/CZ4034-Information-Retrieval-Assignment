@@ -23,7 +23,7 @@ def create_url(keyword, max_results):
     # One common query clause is -is:retweet, which will not match on Retweets,
     # thus matching only on original Tweets, Quote Tweets, and replies.
 
-    # Query for english original tweets that contains a specific keyword and has geo-location
+    # Query for english original tweets that contains a specific keyword
     if keyword.startswith('#'):  # encode the hashtag for url
         query = '%23{} -is:retweet lang:en'.format(keyword[1:])
     else:
