@@ -1,0 +1,21 @@
+.line {
+height: 10px;
+}
+
+.time {
+    font-style: italic;
+    font-size: medium;
+}
+.content {
+    font-size: larger;
+}
+
+.outer {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.spellCheck {
+    font-style: italic;
+    font-weight: bold;
+}

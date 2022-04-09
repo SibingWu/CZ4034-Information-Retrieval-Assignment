@@ -1,0 +1,16 @@
+{% extends 'results.html' %}
+
+{% block content %}
+
+{% for tweet in results %}
+<p class="time">{{tweet.created_at}}</p>
+<p class="content">{{tweet.text}}</p>
+<!-- <p class="sentiment">{{tweet.sentiment}}</p> -->
+
+<div class="line"></div>
+
+{% endfor %}
+
+<!-- <a href="/results/">Go To Results Page</a> -->
+
+{% endblock content %}

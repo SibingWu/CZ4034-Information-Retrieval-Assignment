@@ -1,0 +1,12 @@
+body {
+    max-width: 600px;
+    margin: auto;
+}
+
+.line {
+height: 20px;
+}
+
+form input {
+    width: 450px;
+}
