@@ -28,7 +28,7 @@ def results(request):
 		tweets=get_tweet(results["response"]["docs"])
 
 		request.session['tweets'] = tweets
-
+		request.session['query'] = query
 		
 		#print(len(tweets))
 		if (len(tweets) < 20):
@@ -45,20 +45,27 @@ def results(request):
 def check_filter(request):
 
 	tweets = request.session['tweets']
+	query = request.session['query'] 
 
 	if (request.method == 'GET') and ('sentiment' in request.GET):
 		
 		option = request.GET["sentiment"]
+		
 		if (option == "all"):
+			#print(option)
 			tweets = tweets
+			
 		elif (option == 'positive'):
+		
 			tweets = [tweet for tweet in tweets if tweet['sentiment'] == [4.0]]
+			#print(tweets[0])
 		elif (option == 'negative'):
 			tweets = [tweet for tweet in tweets if tweet['sentiment'] == [0.0]]
 		elif (option == 'neutral'):
 			tweets = [tweet for tweet in tweets if tweet['sentiment'] == [2.0]]
 
-		return render(request, 'filters.html',{'results': tweets})
+		
+		return render(request, 'filters.html',{'query': query, 'results': tweets})
 
 
 
@@ -78,23 +85,10 @@ def home(request):
 	# Your code
 	return render(request, 'homepage.html')
 
-# def spellcheck(request):
+def showCharts(request):
+	if (request.method == 'GET') and ('charts' in request.GET):
 
-#     if (request.method == 'GET') and ('search_box' in request.GET):
-
-#         query = request.GET.get('spell_check_box', None)
-#         print(query)
-#         results=query_solr(query)
-#         tweets=get_tweet(results["response"]["docs"])
-#         if(len(tweets) < 5):
-            
-#             query_spell_check(query)
-#         tweets=get_tweet(results["spellcheck"]["suggestions"][1]["suggestion"])
-
-#         #return render(request, 'spellcheck.html', {'results':tweets})
-    
-#     return JsonResponse({'hello': 'spell check box was empty'})  
-
+		return render(request, 'charts.html')
 
 def tweetsType(request):
 

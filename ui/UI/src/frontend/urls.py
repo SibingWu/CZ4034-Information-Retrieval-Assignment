@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 from search import views
 
@@ -25,5 +27,8 @@ urlpatterns = [
     path('results/',views.results,name='results'),
     path('tweetsByEachUser/',views.tweets_each_user,name='tweetsByEachUser'),
     path('tweetsType/', views.tweetsType, name='tweetsType'),
-    path('filters/',views.check_filter, name='filter')
+    path('filters/',views.check_filter, name='filter'),
+    path('charts/',views.showCharts, name='charts')
 ]
+
+urlpatterns += staticfiles_urlpatterns()

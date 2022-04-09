@@ -104,7 +104,7 @@ def query_spell_check(query):
             print(json_response)
             return json_response
         else:
-            json_response = '{"spellcheck": {"suggestions" : {"text":"No results"}}}'
+            json_response = '{}'
             json_response = json.loads(json_response)
 
         return json_response
