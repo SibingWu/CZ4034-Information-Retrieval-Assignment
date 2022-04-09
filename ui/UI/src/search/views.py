@@ -34,9 +34,9 @@ def results(request):
 		if (len(tweets) < 20):
 			print(len(tweets))
 			json_data = query_spell_check(query)
-			return render(request, 'results.html', {'query': query, 'results':tweets, 'spellchecks':json_data})
+			return render(request, 'results.html', {'query': query, 'results':tweets, 'spellchecks':json_data, 'option': option})
         
-		return render(request, 'results.html', {'query': query, 'results':tweets})
+		return render(request, 'filters.html', {'query': query, 'results':tweets})
 	
 	
 		
@@ -52,20 +52,22 @@ def check_filter(request):
 		option = request.GET["sentiment"]
 		
 		if (option == "all"):
-			#print(option)
+			
 			tweets = tweets
 			
 		elif (option == 'positive'):
-		
+			
 			tweets = [tweet for tweet in tweets if tweet['sentiment'] == [4.0]]
 			#print(tweets[0])
 		elif (option == 'negative'):
+			
 			tweets = [tweet for tweet in tweets if tweet['sentiment'] == [0.0]]
 		elif (option == 'neutral'):
+			
 			tweets = [tweet for tweet in tweets if tweet['sentiment'] == [2.0]]
 
 		
-		return render(request, 'filters.html',{'query': query, 'results': tweets})
+		return render(request, 'filters.html',{'query': query, 'results': tweets, 'sentiment': option})
 
 
 
@@ -80,9 +82,14 @@ def tweets_each_user(request):
         
     return JsonResponse({'hello': 'empty'})
 
-def home(request):
+def home_button(request):
 	''' Home View '''
 	# Your code
+	if (request.method == 'GET') and ('home' in request.GET):
+
+		return render(request, 'homepage.html')
+
+def home(request):
 	return render(request, 'homepage.html')
 
 def showCharts(request):

@@ -13,6 +13,10 @@
 <body>
   <h2>COVID TWEETS SEARCH ENGINE</h2>
   <!-- put in the query word -->
+  <form type="get" action="/home/" style="margin: 0">  
+    <button id="home" type="home">Home!</button>
+  </form>
+
   <p>Results for: <b>{{query}}</b></p>
 
   <!-- sentiment filter -->
@@ -22,18 +26,15 @@
       <!-- <option disabled="true" selected>
         -- Select Sentiment --
       </option> -->
-      <option value="all">All
-      </option>
+      
+      <option value="all" {% if sentiment == 'all' %}selected{% endif %}>All</option>
 
-      <option value="positive">Positive
+      <option value="positive" {% if sentiment == 'positive' %}selected{% endif %}>Positive</option>
 
-      </option>
-      <option value="neutral">Neutral
+      <option value="neutral" {% if sentiment == 'neutral' %}selected{% endif %}>Neutral</option>
 
-      </option>
-      <option value="negative">Negative
+      <option value="negative" {% if sentiment == 'negative' %}selected{% endif %}>Negative</option>
 
-      </option>
     </select>
     <input type="submit" value="Submit">
     
@@ -51,7 +52,7 @@
   <div class="outer">
     <h2 class="spellCheck">Too few results? Spellcheck:</h2>
     {% for key, values in spellchecks.items %}
-    <p>{{key}}</p>
+    <h3>{{key}}: </h3>
       {% for v in values %}
       <p>{{v}}</p>
       {% endfor %}

@@ -47,7 +47,7 @@ def query_one_word(query):
     #query="\"AND\"".join(query)
 	#query_url= "http://127.0.0.1:8983/solr/food/query?q={!parent%20which=path:1.restaurants%20AND%20score=total}path:2.restaurants.reviews%20AND%20review_body:(\""+query+"\")&fl=*,[child%20parentFilter=path:1.restaurants%20childFilter=review_body:(\""+query+"\") limit=10]&sort=score%20desc"
 
-    query_url =  "http://localhost:8983/solr/tweet/select?indent=true&q.op=OR&q=text%3A"+query
+    query_url =  "http://localhost:8983/solr/tweet/select?indent=true&q.op=OR&q=text%3A"+query+"&rows=100"
 
     # "http://localhost:8983/solr/tweet/select?indent=true&q.op=OR&q=text%3Acovid"
 
@@ -65,7 +65,7 @@ def query_multi_word(query):
             query_url += word + "%20"
 
         query_url = query_url[:-3]
-        query_url += "%22"
+        query_url += "%22" + "&rows=100"
         
         return query_index(query_url)
 
@@ -92,16 +92,16 @@ def query_spell_check(query):
                 word = suggestions[2*i]
                 suggestion = suggestions[2*i+1]['suggestion']
                 suggestion_list = []
-                num_of_suggestion = 4 if len(suggestion) > 5 else len(suggestion)
+                num_of_suggestion = 5 if len(suggestion) > 5 else len(suggestion)
                 for j in range(num_of_suggestion):
                     suggestion_list.append(suggestion[j]['word'])
 
                 spell_check_dict[word] = suggestion_list
-                #print(spell_check_dict)
+                print(spell_check_dict)
                 json_response = json.loads(json.dumps(spell_check_dict))
             
             
-            print(json_response)
+            #print(json_response)
             return json_response
         else:
             json_response = '{}'
@@ -121,18 +121,33 @@ def query_spell_check(query):
         r = requests.get(query_url)
         r.raise_for_status()
         json_data = r.json() #dict type
+
         if len(json_data["spellcheck"]["suggestions"])>0:
-            #TODO: extract all the query suggestion words
-            return json_data
+                        
+            suggestions = json_data["spellcheck"]["suggestions"]
+            spell_check_dict = {}
+            length = len(suggestions)
+            for i in range(int(length/2)):
+                word = suggestions[2*i]
+                suggestion = suggestions[2*i+1]['suggestion']
+                suggestion_list = []
+                num_of_suggestion = 5 if len(suggestion) > 5 else len(suggestion)
+                for j in range(num_of_suggestion):
+                    suggestion_list.append(suggestion[j]['word'])
+
+                spell_check_dict[word] = suggestion_list
+                print(spell_check_dict)
+                json_response = json.loads(json.dumps(spell_check_dict))
+            
+            
+            #print(json_response)
+            return json_response
         else:
-            json_response = '{"spellcheck": {"suggestions" : {"text":"No results"}}}'
+            json_response = '{}'
             json_response = json.loads(json_response)
 
         return json_response
-
-
-
-
+        
 def query_tweets_each_user():
     
     query_url = "http://localhost:8983/solr/tweet/select?facet.field=author_id&facet=true&indent=true&q.op=OR&q=*%3A*&rows=0"
