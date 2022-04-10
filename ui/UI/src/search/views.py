@@ -2,7 +2,12 @@ from django.shortcuts import render
 
 from django.http import JsonResponse
 from datetime import date
+from matplotlib.pyplot import pie
 import requests
+
+from bar_plot import draw_count_bar_chart 
+from pie_plot import draw_sentiment_pie_chart
+
 
 from .query import *
 # Create your views here.
@@ -92,11 +97,6 @@ def home_button(request):
 def home(request):
 	return render(request, 'homepage.html')
 
-def showCharts(request):
-	if (request.method == 'GET') and ('charts' in request.GET):
-
-		return render(request, 'charts.html')
-
 def tweetsType(request):
 
     if (request.method == 'GET') and ('TweetsType' in request.GET):
@@ -107,3 +107,17 @@ def tweetsType(request):
         return render(request, 'tweetsType.html', {'results': tweets})
         
     return JsonResponse({'hello': 'empty'})
+
+
+def showCharts(request):
+
+	query = request.session['query'] 
+
+	if (request.method == 'GET') and ('charts' in request.GET):
+		bar_results = query_bar_charts(query)
+		pie_results = query_pie_charts(query)
+
+		bar_chart = draw_count_bar_chart(bar_results)
+		pie_chart = draw_sentiment_pie_chart(pie_results)
+
+		return render(request, 'charts.html',{'bar_chart': bar_chart, 'pie_chart': pie_chart})

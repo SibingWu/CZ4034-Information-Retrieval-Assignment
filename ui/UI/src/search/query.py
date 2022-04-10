@@ -147,7 +147,7 @@ def query_spell_check(query):
             json_response = json.loads(json_response)
 
         return json_response
-        
+
 def query_tweets_each_user():
     
     query_url = "http://localhost:8983/solr/tweet/select?facet.field=author_id&facet=true&indent=true&q.op=OR&q=*%3A*&rows=0"
@@ -166,3 +166,56 @@ def query_tweets_type():
     json_data = r.json() #dict type
 
     return json_data
+
+def query_bar_charts(query):
+    query_list = query.split("+")
+    query_url = "http://localhost:8983/solr/tweet/select?facet.field=keyword&facet=true&indent=true&q.op=OR&q=text%3A"
+    if len(query_list) == 1:
+        query_url += query_list[0] + "&rows=0"
+
+        #print(query_url)
+        r = requests.get(query_url)
+        r.raise_for_status()
+        json_data = r.json() #dict type
+        return json_data
+    else:
+        query_url += "%22"
+        for word in query_list:
+            query_url += word + "%20"
+
+        query_url = query_url[:-3]
+        query_url += "%22"
+        query_url += "&rows=0"
+
+        r = requests.get(query_url)
+        r.raise_for_status()
+        json_data = r.json() #dict type
+
+        return json_data
+
+
+def query_pie_charts(query):
+    query_list = query.split("+")
+    query_url = "http://localhost:8983/solr/tweet/select?facet.field=sentiment&facet=true&indent=true&q.op=OR&q=text%3A"
+    if len(query_list) == 1:
+        query_url += query_list[0] + "&rows=0"
+
+        #print(query_url)
+        r = requests.get(query_url)
+        r.raise_for_status()
+        json_data = r.json() #dict type
+        return json_data
+    else:
+        query_url += "%22"
+        for word in query_list:
+            query_url += word + "%20"
+
+        query_url = query_url[:-3]
+        query_url += "%22"
+        query_url += "&rows=0"
+
+        r = requests.get(query_url)
+        r.raise_for_status()
+        json_data = r.json() #dict type
+
+        return json_data

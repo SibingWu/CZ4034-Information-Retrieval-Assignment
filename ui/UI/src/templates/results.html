@@ -41,6 +41,15 @@
   </form>
 
   <div class="line"></div>
+
+  <form type="get" action="/charts/" style="margin: 0">
+    
+    <button id="charts" type="submit" name="charts">Show charts!</button>
+
+  </form>
+  
+  <div class="line"></div>
+
   <div class="outer">
     {% block content %}
     
@@ -56,11 +65,6 @@
       {% for v in values %}
       <p>{{v}}</p>
       {% endfor %}
-
-    <!-- 这里可以改成超链接到 这个suggestion的result界面 e.x.-->
-    <!-- <a href="">{{dic}}</a> -->
-
-    <!-- <div class="line"></div> -->
 
     {% endfor %}
   </div>

@@ -30,14 +30,16 @@
 <div class="row">
   <div class="column" >
     <h2>This bar graph shows number of tweets by keywords</h2>
-    {% load static %}
-    <img src= "{% static "bar_chart.png" %}" style="width:600px;height:400px;">
+    {% if bar_chart %}
+    <img src="data: image/png;base64, {{bar_chart|safe}}" style="width:600px;height:400px;">
+    {% endif %}
   </div>
 
   <div class="column">
     <h2>This pie chart shows the percentage of sentiment tweets</h2>
-    {% load static %}
-    <img src= "{% static "pie_chart.png" %}" style="width:400px;height:400px;">
+    {% if pie_chart %}
+    <img src="data: image/png;base64, {{pie_chart|safe}}" style="width: 500px;height: 500px;">
+    {% endif %}
   </div>
 </div>
 

@@ -25,8 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',include('search.urls')),
     path('results/',views.results,name='results'),
-    path('tweetsByEachUser/',views.tweets_each_user,name='tweetsByEachUser'),
-    path('tweetsType/', views.tweetsType, name='tweetsType'),
     path('filters/',views.check_filter, name='filter'),
     path('charts/',views.showCharts, name='charts')
 ]
