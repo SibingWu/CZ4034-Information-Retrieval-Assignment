@@ -9,7 +9,7 @@
 2. **Install necessary libraries**
    1. `pip install requirements.txt`
 3. **Pre-run settings**
-   1. `cd solr-8.11.1` from the project folder
+   1. `cd backend/solr-8.11.1` from the project folder
    2. `bin/solr start`
 4. **Run the app**
    1. `cd ui/UI/src` from the project folder
