@@ -128,3 +128,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Local API keys
+crawling/config/local_twitter_crawl_api_keys.json
