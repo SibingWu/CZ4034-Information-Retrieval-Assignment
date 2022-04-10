@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TweetsType</title>
+<link rel="stylesheet" href={% static 'styling.css' %}>
+</head>
+
+<body>
+    <div class="outer">
+        <br>
+        <br>
+    {% for tweet in results %}
+    <p>{{tweet}}</p> 
+<div class="line"></div>
+
+  {% endfor %}
+</div>
+</body>
+
+</html> 

@@ -1,0 +1,23 @@
+{% extends 'results.html' %}
+
+{% load static %}
+<link rel="stylesheet" href={% static 'results_style.css' %}> 
+
+{% block content %}
+
+{% for tweet in results %}
+
+<div class="tweet">
+    <div class="time">{{tweet.created_at}}</div>
+    <div class="content">{{tweet.text}}</div>
+</div>
+
+
+<!-- <p class="sentiment">{{tweet.sentiment}}</p> -->
+
+
+{% endfor %}
+
+<!-- <a href="/results/">Go To Results Page</a> -->
+
+{% endblock content %}

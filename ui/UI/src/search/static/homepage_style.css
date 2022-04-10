@@ -1,0 +1,26 @@
+body {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 200px;
+    background-color: aliceblue;
+}
+
+.line {
+    height: 20px;
+}
+
+input {
+    width: 450px;
+    height: 30px;
+
+}
+
+button {
+    height: 30px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-radius: 5px;
+    border-color: aliceblue;
+}

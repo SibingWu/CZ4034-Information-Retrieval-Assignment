@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Can put the query word the result is for in the title? -->
+  <title>Results</title>
+  <!-- <link rel="stylesheet" href={% static 'styling.css' %}> -->
+
+  <link rel="stylesheet" href={% static 'results_style.css' %}> 
+</head>
+
+
+<body>
+  <h2>COVID TWEETS SEARCH ENGINE</h2>
+  <!-- put in the query word -->
+  <form type="get" action="/home/" style="margin: 0">
+    <button id="home" type="home">Home!</button>
+  </form>
+
+  <p>Results for: <b>{{query}}</b></p>
+
+  <!-- sentiment filter -->
+  <form type="get" action="/filters/" style="margin: 0">
+    <label for="sentiment">Choose a sentiment:</label>
+    <select name="sentiment" id="sentiment">
+      <!-- <option disabled="true" selected>
+        -- Select Sentiment --
+      </option> -->
+      
+      <option value="all" {% if sentiment == 'all' %}selected{% endif %}>All</option>
+
+      <option value="positive" {% if sentiment == 'positive' %}selected{% endif %}>Positive</option>
+
+      <option value="neutral" {% if sentiment == 'neutral' %}selected{% endif %}>Neutral</option>
+
+      <option value="negative" {% if sentiment == 'negative' %}selected{% endif %}>Negative</option>
+
+    </select>
+    <input type="submit" value="Submit">
+    
+  </form>
+
+  <div class="line"></div>
+
+  <form type="get" action="/charts/" style="margin: 0">
+
+    <button id="charts" type="submit" name="charts">Show charts!</button>
+
+  </form>
+
+
+  <div class="outer">
+    {% block content %}
+
+    {% endblock %}
+
+  </div>
+
+
+  <div class="outer">
+    <h3 class="spellCheck">Too few results? Spellcheck:</h3>
+    {% for key, values in spellchecks.items %}
+    <h4>{{key}}: </h4>
+    {% for v in values %}
+    <p>{{v}}</p>
+    {% endfor %}
+
+    {% endfor %}
+  </div>
+
+</body>
+
+</html>
