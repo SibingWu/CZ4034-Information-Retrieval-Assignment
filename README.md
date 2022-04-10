@@ -7,7 +7,7 @@
    3. `virtualenv venv`
    4. `source venv/bin/activate`
 2. **Install necessary libraries**
-   1. `pip install requirements.txt`
+   1. `pip install -r requirements.txt`
 3. **Pre-run settings**
    1. `cd backend/solr-8.11.1` from the project folder
    2. `bin/solr start`
