@@ -1,13 +1,20 @@
 {% extends 'results.html' %}
 
+{% load static %}
+<link rel="stylesheet" href={% static 'results_style.css' %}> 
+
 {% block content %}
 
 {% for tweet in results %}
-<p class="time">{{tweet.created_at}}</p>
-<p class="content">{{tweet.text}}</p>
+
+<div class="tweet">
+    <div class="time">{{tweet.created_at}}</div>
+    <div class="content">{{tweet.text}}</div>
+</div>
+
+
 <!-- <p class="sentiment">{{tweet.sentiment}}</p> -->
 
-<div class="line"></div>
 
 {% endfor %}
 
