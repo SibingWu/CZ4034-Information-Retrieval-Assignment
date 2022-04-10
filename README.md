@@ -8,10 +8,13 @@
    4. `source venv/bin/activate`
 2. **Install necessary libraries**
    1. `pip install requirements.txt`
-3. **Run the app**
-   1. `cd ui/UI/src`
+3. **Pre-run settings**
+   1. `cd solr-8.11.1` from the project folder
+   2. `bin/solr start`
+4. **Run the app**
+   1. `cd ui/UI/src` from the project folder
    2. `python manage.py migrate`
    3. `python manage.py runserver`
-4. **Open the Search Engine in browser**
+5. **Open the Search Engine in browser**
    1. open a browser, type `http://127.0.0.1:8000/` in the url box
-5. **DONE!!**
+6. **DONE!!**
