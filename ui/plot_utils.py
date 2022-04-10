@@ -92,6 +92,7 @@ def draw_count_bar_chart(json_record, fig_save_path=None):
 
     fig, ax = plt.subplots(figsize=(20, 10), dpi=100)
     plt.bar(keywords, counts, tick_label=keywords)
+    plt.tick_params(labelsize=23)
 
     # 显示数据标签
     for a, b in zip(keywords, counts):
@@ -133,6 +134,7 @@ def draw_sentiment_pie_chart(json_record, fig_save_path=None):
         autopct='%.2f%%'  # 格式化输出百分比
     )
     plt.legend(loc='best')
+    plt.tick_params(labelsize=23)
 
     if fig_save_path is not None:
         plt.savefig(fig_save_path)
