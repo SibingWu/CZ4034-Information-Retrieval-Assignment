@@ -90,7 +90,7 @@ def draw_count_bar_chart(json_record, fig_save_path=None):
         keywords.append(keyword)
         counts.append(count)
 
-    fig, ax = plt.subplots(figsize=(20, 10), dpi=100)
+    plt.subplots(figsize=(80, 20), dpi=100)
     plt.bar(keywords, counts, tick_label=keywords)
     plt.tick_params(labelsize=23)
 
@@ -127,7 +127,7 @@ def draw_sentiment_pie_chart(json_record, fig_save_path=None):
         sentiments.append(sentiment_dict[sentiment])
         counts.append(count)
 
-    plt.subplots(figsize=(20, 10), dpi=100)
+    plt.subplots(figsize=(20, 20), dpi=100)
     plt.pie(
         counts,
         labels=sentiments,  # 设置饼图标题
