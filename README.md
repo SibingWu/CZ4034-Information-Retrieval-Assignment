@@ -1,6 +1,7 @@
 # CZ4034-Information-Retrieval-Assignment
 
 ## How to run the Covid Tweets Search Engine
+**Better run in MacOS/linux to avoid path problem**
 1. **Create a virtual environment**
    1. open a terminal under the project folder
    2. run `pip install virtualenv` if `virtualenv` package is not already installed
