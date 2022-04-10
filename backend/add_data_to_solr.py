@@ -22,7 +22,7 @@ import os
 #data = tweets['data'].values.tolist()
 
 # Index and add data to Solr with core 'toxictweets'
-solr = pysolr.Solr("http://localhost:8983/solr/t", always_commit=True)
+solr = pysolr.Solr("http://localhost:8983/solr/tweet", always_commit=True)
 #print("Add data to Solr:")
 # print(solr.add(tweets))
 

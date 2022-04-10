@@ -1,0 +1,406 @@
+2022-04-09 02:35:27.065 INFO  (main) [   ] o.e.j.u.log Logging initialized @1327ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-04-09 02:35:27.327 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 11.0.9.1+12-LTS
+2022-04-09 02:35:27.341 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/contexts/] at interval 0
+2022-04-09 02:35:27.704 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2022-04-09 02:35:27.715 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2022-04-09 02:35:27.715 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2022-04-09 02:35:27.717 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2022-04-09 02:35:27.792 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-04-09 02:35:27.799 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.11.1
+2022-04-09 02:35:27.799 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-04-09 02:35:27.799 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1
+2022-04-09 02:35:27.799 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2022-04-09T02:35:27.799519Z
+2022-04-09 02:35:27.829 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr
+2022-04-09 02:35:27.829 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/solr.xml
+2022-04-09 02:35:27.921 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7331196b, but no JMX reporters were configured - adding default JMX reporter.
+2022-04-09 02:35:28.542 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2022-04-09 02:35:28.736 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@64984b0f[provider=null,keyStore=null,trustStore=null]
+2022-04-09 02:35:28.736 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@64984b0f[provider=null,keyStore=null,trustStore=null]
+2022-04-09 02:35:28.904 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@57562473[provider=null,keyStore=null,trustStore=null]
+2022-04-09 02:35:28.904 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@57562473[provider=null,keyStore=null,trustStore=null]
+2022-04-09 02:35:28.959 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-04-09 02:35:29.103 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2022-04-09 02:35:29.119 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2022-04-09 02:35:29.191 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7331196b
+2022-04-09 02:35:29.192 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7331196b
+2022-04-09 02:35:29.193 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7331196b
+2022-04-09 02:35:29.273 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr
+2022-04-09 02:35:29.274 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [tweet, test]
+2022-04-09 02:35:29.462 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.1
+2022-04-09 02:35:29.468 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.1
+2022-04-09 02:35:29.548 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@1556f2dd{/solr,file:///Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr-webapp/webapp/,AVAILABLE}{/Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr-webapp/webapp}
+2022-04-09 02:35:29.556 WARN  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2022-04-09 02:35:29.556 WARN  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2022-04-09 02:35:29.633 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.IndexSchema Schema name=default-config
+2022-04-09 02:35:29.633 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1a69561c{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-04-09 02:35:29.643 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.IndexSchema Schema name=default-config
+2022-04-09 02:35:29.653 INFO  (main) [   ] o.e.j.s.Server Started @3898ms
+2022-04-09 02:35:30.216 WARN  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2022-04-09 02:35:30.216 WARN  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2022-04-09 02:35:30.217 WARN  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2022-04-09 02:35:30.393 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-04-09 02:35:30.393 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-04-09 02:35:30.425 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.c.CoreContainer Creating SolrCore 'tweet' using configuration from instancedir /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/tweet, trusted=true
+2022-04-09 02:35:30.426 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.c.CoreContainer Creating SolrCore 'test' using configuration from instancedir /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/test, trusted=true
+2022-04-09 02:35:30.456 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.tweet' (registry 'solr.core.tweet') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7331196b
+2022-04-09 02:35:30.456 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.test' (registry 'solr.core.test') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7331196b
+2022-04-09 02:35:30.471 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.c.SolrCore [[tweet] ] Opening new SolrCore at [/Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/tweet], dataDir=[/Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/tweet/data/]
+2022-04-09 02:35:30.471 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.c.SolrCore [[test] ] Opening new SolrCore at [/Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/test], dataDir=[/Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/test/data/]
+2022-04-09 02:35:31.536 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-04-09 02:35:31.536 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-04-09 02:35:31.536 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-04-09 02:35:31.536 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-04-09 02:35:31.560 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-04-09 02:35:31.560 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-04-09 02:35:31.560 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-04-09 02:35:31.560 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-04-09 02:35:31.771 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/test/conf
+2022-04-09 02:35:31.771 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr/tweet/conf
+2022-04-09 02:35:31.786 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2022-04-09 02:35:31.786 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2022-04-09 02:35:31.830 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.h.c.SpellCheckComponent Registering newSearcher listener for spellchecker: default
+2022-04-09 02:35:31.839 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.h.c.SpellCheckComponent Registering newSearcher listener for spellchecker: default
+2022-04-09 02:35:31.842 INFO  (coreLoadExecutor-13-thread-2) [   x:test] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-04-09 02:35:31.842 INFO  (coreLoadExecutor-13-thread-1) [   x:tweet] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-04-09 02:35:31.888 INFO  (searcherExecutor-15-thread-1-processing-x:test) [   x:test] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-04-09 02:35:31.888 INFO  (searcherExecutor-17-thread-1-processing-x:tweet) [   x:tweet] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-04-09 02:35:31.888 INFO  (searcherExecutor-15-thread-1-processing-x:test) [   x:test] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-04-09 02:35:31.888 INFO  (searcherExecutor-17-thread-1-processing-x:tweet) [   x:tweet] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-04-09 02:35:31.897 INFO  (searcherExecutor-17-thread-1-processing-x:tweet) [   x:tweet] o.a.s.c.SolrCore [tweet]  Registered new searcher autowarm time: 0 ms
+2022-04-09 02:35:31.899 INFO  (searcherExecutor-15-thread-1-processing-x:test) [   x:test] o.a.s.c.SolrCore [test]  Registered new searcher autowarm time: 0 ms
+2022-04-09 02:35:40.544 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.u.p.LogUpdateProcessorFactory [tweet]  webapp=/solr path=/update/json/docs params={}{add=[1510314716178046976 (1729596472910938112), 1510313065589481472 (1729596472995872768), 1510312154284630016 (1729596472996921344), 1510311792698101760 (1729596473000067072), 1510309831005069312 (1729596473002164224), 1510309525810724864 (1729596473004261376), 1510306220040761344 (1729596473005309952), 1510302546828615680 (1729596473008455680), 1510301454657110016 (1729596473010552832), 1510299149236940800 (1729596473011601408), ... (66862 adds)]} 0 6619
+2022-04-09 02:35:43.895 INFO  (searcherExecutor-17-thread-1-processing-x:tweet) [   x:tweet] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-04-09 02:35:43.896 INFO  (searcherExecutor-17-thread-1-processing-x:tweet) [   x:tweet] o.a.s.h.c.SpellCheckComponent Building spell index for spell checker: default
+2022-04-09 02:35:47.796 INFO  (searcherExecutor-17-thread-1-processing-x:tweet) [   x:tweet] o.a.s.c.SolrCore [tweet]  Registered new searcher autowarm time: 14 ms
+2022-04-09 02:35:47.955 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.u.p.LogUpdateProcessorFactory [tweet]  webapp=/solr path=/update params={commit=true}{commit=} 0 7390
+2022-04-09 02:35:56.886 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=1
+2022-04-09 02:35:56.904 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=9
+2022-04-09 02:35:56.987 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649471756858} hits=66856 status=0 QTime=76
+2022-04-09 02:36:11.097 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.PluginBag Going to create a new requestHandler with {type = requestHandler,name = /spell,class = solr.SearchHandler,attributes = {startup=lazy, name=/spell, class=solr.SearchHandler},args = {defaults={spellcheck.dictionary=default,spellcheck=on,spellcheck.extendedResults=true,spellcheck.count=10,spellcheck.alternativeTermCount=5,spellcheck.maxResultsForSuggest=5,spellcheck.collate=true,spellcheck.collateExtendedResults=true,spellcheck.maxCollationTries=10,spellcheck.maxCollations=5,df=_text_},last-components=[spellcheck]}} 
+2022-04-09 02:36:11.211 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=johson&indent=true&q.op=OR&_=1649471756858} hits=0 status=0 QTime=113
+2022-04-09 02:36:11.742 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:36:11.744 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=2
+2022-04-09 02:36:11.799 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=johson&indent=true&q.op=OR&_=1649471756858} hits=0 status=0 QTime=20
+2022-04-09 02:36:18.762 INFO  (qtp1803093683-20) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=johson+state&indent=true&q.op=OR&_=1649471756858} hits=0 status=0 QTime=48
+2022-04-09 02:36:19.291 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:36:19.295 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=3
+2022-04-09 02:36:19.310 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=johson+state&indent=true&q.op=OR&_=1649471756858} hits=0 status=0 QTime=15
+2022-04-09 02:36:26.016 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q="johson+state"&indent=true&q.op=OR&_=1649471756858} hits=0 status=0 QTime=32
+2022-04-09 02:36:26.701 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:36:26.712 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=2
+2022-04-09 02:36:26.723 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q="johson+state"&indent=true&q.op=OR&_=1649471756858} hits=0 status=0 QTime=13
+2022-04-09 02:36:41.824 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:coming&indent=true&q.op=OR&_=1649471756858} hits=1593 status=0 QTime=7
+2022-04-09 02:36:42.334 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:36:42.336 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=2
+2022-04-09 02:36:42.373 INFO  (qtp1803093683-20) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:coming&indent=true&q.op=OR&_=1649471756858} hits=1593 status=0 QTime=1
+2022-04-09 02:36:58.786 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"product+manage"&indent=true&q.op=OR&_=1649471756858} hits=158 status=0 QTime=19
+2022-04-09 02:36:59.177 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:36:59.178 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"product+manage"&indent=true&q.op=OR&_=1649471756858} hits=158 status=0 QTime=0
+2022-04-09 02:36:59.180 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=3
+2022-04-09 02:37:19.704 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=3
+2022-04-09 02:37:19.731 INFO  (qtp1803093683-17) [   x:test] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.test tag=null
+2022-04-09 02:37:19.731 INFO  (qtp1803093683-17) [   x:test] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@1a78e8b: rootName = null, domain = solr.core.test, service url = null, agent id = null] for registry solr.core.test/com.codahale.metrics.MetricRegistry@564a7d7d
+2022-04-09 02:37:19.748 INFO  (qtp1803093683-17) [   ] o.a.s.c.SolrCore [test]  CLOSING SolrCore org.apache.solr.core.SolrCore@4ab42b8b
+2022-04-09 02:37:19.748 INFO  (qtp1803093683-17) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.test tag=SolrCore@4ab42b8b
+2022-04-09 02:37:19.749 INFO  (qtp1803093683-17) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-04-09 02:37:19.783 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={deleteInstanceDir=true&core=test&deleteDataDir=true&action=UNLOAD&wt=json&deleteIndex=true} status=0 QTime=54
+2022-04-09 02:37:38.941 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=sentiment:2.0&indent=true&q.op=OR&_=1649471756858} hits=40466 status=0 QTime=32
+2022-04-09 02:37:39.386 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:37:39.393 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=8
+2022-04-09 02:37:39.400 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=sentiment:2.0&indent=true&q.op=OR&_=1649471756858} hits=40466 status=0 QTime=0
+2022-04-09 02:38:04.359 WARN  (qtp1803093683-17) [   x:tweet] o.a.s.r.SimpleFacets Raising facet.mincount from 0 to 1, because field sentiment is Points-based.
+2022-04-09 02:38:04.362 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={facet.field=sentiment&indent=true&q.op=OR&rows=0&facet=true&_=1649471756858} hits=0 status=0 QTime=28
+2022-04-09 02:38:04.818 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:38:04.821 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=3
+2022-04-09 02:38:22.265 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&rows=0&_=1649471756858} hits=66856 status=0 QTime=0
+2022-04-09 02:38:22.621 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:38:22.630 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=2
+2022-04-09 02:38:22.633 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&rows=0&_=1649471756858} hits=66856 status=0 QTime=0
+2022-04-09 02:38:34.528 WARN  (qtp1803093683-23) [   x:tweet] o.a.s.r.SimpleFacets Raising facet.mincount from 0 to 1, because field sentiment is Points-based.
+2022-04-09 02:38:34.549 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=sentiment&indent=true&q.op=OR&rows=0&facet=true&_=1649471756858} hits=66856 status=0 QTime=28
+2022-04-09 02:38:34.938 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:38:34.938 WARN  (qtp1803093683-22) [   x:tweet] o.a.s.r.SimpleFacets Raising facet.mincount from 0 to 1, because field sentiment is Points-based.
+2022-04-09 02:38:34.940 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=2
+2022-04-09 02:38:34.945 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=sentiment&indent=true&q.op=OR&rows=0&facet=true&_=1649471756858} hits=66856 status=0 QTime=7
+2022-04-09 02:39:41.076 INFO  (qtp1803093683-20) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0&_=1649471756858} hits=727 status=0 QTime=7
+2022-04-09 02:39:41.475 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:39:41.476 INFO  (qtp1803093683-24) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0&_=1649471756858} hits=727 status=0 QTime=0
+2022-04-09 02:39:41.478 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=3
+2022-04-09 02:39:46.241 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=10&_=1649471756858} hits=727 status=0 QTime=1
+2022-04-09 02:39:46.766 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:39:46.766 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=10&_=1649471756858} hits=727 status=0 QTime=0
+2022-04-09 02:39:46.768 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=2
+2022-04-09 02:40:05.215 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0&_=1649471756858} hits=727 status=0 QTime=0
+2022-04-09 02:40:05.607 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649471756762} status=0 QTime=0
+2022-04-09 02:40:05.614 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0&_=1649471756858} hits=727 status=0 QTime=1
+2022-04-09 02:40:05.614 INFO  (qtp1803093683-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649471756764} status=0 QTime=3
+2022-04-09 02:40:26.324 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0} hits=727 status=0 QTime=0
+2022-04-09 02:40:30.345 INFO  (qtp1803093683-16) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND} hits=727 status=0 QTime=0
+2022-04-09 02:40:49.344 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 02:40:49.347 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0&_=1649472049320} hits=727 status=0 QTime=0
+2022-04-09 02:40:49.350 INFO  (qtp1803093683-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=3
+2022-04-09 02:44:03.869 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=0&_=1649472049320} hits=727 status=0 QTime=2
+2022-04-09 02:44:09.858 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=500&_=1649472049320} hits=727 status=0 QTime=5
+2022-04-09 02:44:10.809 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 02:44:10.819 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=2
+2022-04-09 02:44:10.827 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid%0asentiment:4.0&indent=true&q.op=AND&rows=500&_=1649472049320} hits=727 status=0 QTime=2
+2022-04-09 03:10:45.533 INFO  (qtp1803093683-46) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=cevid&indent=true&q.op=AND&rows=500&_=1649472049320} hits=0 status=0 QTime=42
+2022-04-09 03:10:45.925 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=1
+2022-04-09 03:10:45.945 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=20
+2022-04-09 03:10:45.949 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=cevid&indent=true&q.op=AND&rows=500&_=1649472049320} hits=0 status=0 QTime=24
+2022-04-09 03:15:45.531 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=cevid+state&indent=true&q.op=AND&rows=500&_=1649472049320} hits=0 status=0 QTime=54
+2022-04-09 03:15:46.158 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:15:46.172 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=15
+2022-04-09 03:15:46.173 INFO  (qtp1803093683-16) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=cevid+state&indent=true&q.op=AND&rows=500&_=1649472049320} hits=0 status=0 QTime=15
+2022-04-09 03:23:41.449 INFO  (qtp1803093683-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=19
+2022-04-09 03:28:12.312 INFO  (qtp1803093683-20) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={facet.field=keyword&indent=true&q.op=AND&rows=500&spatial=true&facet=true&_=1649472049320} hits=0 status=0 QTime=143
+2022-04-09 03:28:12.909 INFO  (qtp1803093683-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:28:12.981 INFO  (qtp1803093683-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=8
+2022-04-09 03:28:19.506 INFO  (qtp1803093683-19) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=AND&rows=0&spatial=true&facet=true&_=1649472049320} hits=66856 status=0 QTime=30
+2022-04-09 03:28:20.181 INFO  (qtp1803093683-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:28:20.188 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=3
+2022-04-09 03:28:20.194 INFO  (qtp1803093683-19) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=AND&rows=0&spatial=true&facet=true&_=1649472049320} hits=66856 status=0 QTime=8
+2022-04-09 03:29:24.237 WARN  (qtp1803093683-21) [   x:tweet] o.a.s.r.SimpleFacets Raising facet.mincount from 0 to 1, because field sentiment is Points-based.
+2022-04-09 03:29:24.242 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=sentiment&indent=true&q.op=AND&rows=0&spatial=true&facet=true&_=1649472049320} hits=66856 status=0 QTime=6
+2022-04-09 03:29:24.671 INFO  (qtp1803093683-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:29:24.683 WARN  (qtp1803093683-21) [   x:tweet] o.a.s.r.SimpleFacets Raising facet.mincount from 0 to 1, because field sentiment is Points-based.
+2022-04-09 03:29:24.686 INFO  (qtp1803093683-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=3
+2022-04-09 03:29:24.686 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=sentiment&indent=true&q.op=AND&rows=0&spatial=true&facet=true&_=1649472049320} hits=66856 status=0 QTime=4
+2022-04-09 03:33:12.486 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649475192363} status=0 QTime=2
+2022-04-09 03:33:12.500 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649475192363} status=0 QTime=16
+2022-04-09 03:33:12.506 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649475192363} status=0 QTime=3
+2022-04-09 03:33:16.474 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:33:16.480 INFO  (qtp1803093683-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=4
+2022-04-09 03:33:16.490 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=6
+2022-04-09 03:33:19.663 INFO  (qtp1803093683-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:33:19.678 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=10
+2022-04-09 03:33:19.687 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/system params={wt=json&_=1649475199528} status=0 QTime=11
+2022-04-09 03:33:19.694 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1649472049250&ts=1649472049250} status=503 QTime=19
+2022-04-09 03:33:19.705 INFO  (qtp1803093683-19) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/replication params={wt=json&command=details&_=1649475199528} status=0 QTime=33
+2022-04-09 03:33:19.714 INFO  (qtp1803093683-25) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1649475199528} status=0 QTime=46
+2022-04-09 03:33:47.490 INFO  (qtp1803093683-47) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:33:47.492 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=2
+2022-04-09 03:33:57.334 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:33:57.338 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=2
+2022-04-09 03:33:57.345 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=4
+2022-04-09 03:34:05.016 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:34:05.028 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=1
+2022-04-09 03:34:05.037 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1649475199528} status=0 QTime=0
+2022-04-09 03:34:05.039 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/replication params={wt=json&command=details&_=1649475199528} status=0 QTime=1
+2022-04-09 03:34:05.043 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/system params={wt=json&_=1649475199528} status=0 QTime=6
+2022-04-09 03:34:05.049 INFO  (qtp1803093683-47) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1649472049250&ts=1649472049250} status=503 QTime=0
+2022-04-09 03:34:12.361 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:34:12.367 INFO  (qtp1803093683-49) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=3
+2022-04-09 03:34:14.494 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649472049320} hits=66856 status=0 QTime=3
+2022-04-09 03:34:14.855 INFO  (qtp1803093683-49) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649472049249} status=0 QTime=0
+2022-04-09 03:34:14.909 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649472049320} hits=66856 status=0 QTime=0
+2022-04-09 03:34:14.911 INFO  (qtp1803093683-47) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649472049250} status=0 QTime=4
+2022-04-09 04:22:24.667 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649478144381} status=0 QTime=5
+2022-04-09 04:22:24.687 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649478144381} status=0 QTime=20
+2022-04-09 04:22:24.694 INFO  (qtp1803093683-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649478144381} status=0 QTime=4
+2022-04-09 04:22:26.381 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649478144381} status=0 QTime=0
+2022-04-09 04:22:26.397 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649478144381} status=0 QTime=10
+2022-04-09 04:22:26.400 INFO  (qtp1803093683-20) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1649478146365} status=0 QTime=8
+2022-04-09 04:22:26.402 INFO  (qtp1803093683-46) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/system params={wt=json&_=1649478146365} status=0 QTime=7
+2022-04-09 04:22:26.410 INFO  (qtp1803093683-25) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/replication params={wt=json&command=details&_=1649478146366} status=0 QTime=3
+2022-04-09 04:22:26.422 INFO  (qtp1803093683-49) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1649478144381&ts=1649478144381} status=503 QTime=0
+2022-04-09 04:22:28.555 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649478144381} status=0 QTime=4
+2022-04-09 04:22:28.557 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649478144381} status=0 QTime=0
+2022-04-09 04:22:41.499 INFO  (qtp1803093683-49) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=joson&indent=true&q.op=OR&_=1649478148531} hits=0 status=0 QTime=34
+2022-04-09 04:22:41.603 INFO  (qtp1803093683-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649478144381} status=0 QTime=0
+2022-04-09 04:22:41.606 INFO  (qtp1803093683-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649478144381} status=0 QTime=2
+2022-04-09 04:22:41.622 INFO  (qtp1803093683-25) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=joson&indent=true&q.op=OR&_=1649478148531} hits=0 status=0 QTime=8
+2022-04-09 04:23:43.443 INFO  (qtp1803093683-46) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=joson&indent=true&q.op=OR} hits=0 status=0 QTime=8
+2022-04-09 04:23:55.404 INFO  (qtp1803093683-25) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=joson&indent=true&q.op=OR} hits=0 status=0 QTime=11
+2022-04-09 06:26:20.320 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=7
+2022-04-09 06:26:20.342 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=31
+2022-04-09 06:26:20.359 INFO  (qtp1803093683-49) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=joson&indent=true&q.op=OR&_=1649485580266} hits=0 status=0 QTime=48
+2022-04-09 06:26:22.307 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=0
+2022-04-09 06:26:22.310 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=3
+2022-04-09 06:26:24.447 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649485580266} hits=66856 status=0 QTime=7
+2022-04-09 06:26:24.626 INFO  (qtp1803093683-49) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649485580266} hits=66856 status=0 QTime=0
+2022-04-09 06:26:24.626 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=1
+2022-04-09 06:26:24.638 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=7
+2022-04-09 06:31:08.801 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=6
+2022-04-09 06:31:08.997 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=0
+2022-04-09 06:31:09.000 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=2
+2022-04-09 06:31:09.003 INFO  (qtp1803093683-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=5
+2022-04-09 07:36:14.750 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=10
+2022-04-09 07:36:16.370 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=2
+2022-04-09 07:36:17.225 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=4
+2022-04-09 07:36:20.143 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=0
+2022-04-09 07:36:21.265 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=0
+2022-04-09 07:36:24.663 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={indent=true&q.op=OR&_=1649485580266} hits=0 status=0 QTime=1
+2022-04-09 07:36:24.941 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=2
+2022-04-09 07:36:24.966 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=15
+2022-04-09 07:36:38.158 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649485580266} hits=66856 status=0 QTime=1
+2022-04-09 07:36:38.480 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=0
+2022-04-09 07:36:38.480 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649485580266} hits=66856 status=0 QTime=0
+2022-04-09 07:36:38.484 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=4
+2022-04-09 07:54:36.009 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=11
+2022-04-09 07:54:36.269 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649485580266} hits=10970 status=0 QTime=0
+2022-04-09 07:54:36.269 INFO  (qtp1803093683-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=1
+2022-04-09 07:54:36.288 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=18
+2022-04-09 07:56:16.575 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:working&indent=true&q.op=OR&_=1649485580266} hits=14067 status=0 QTime=10
+2022-04-09 07:56:17.000 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=0
+2022-04-09 07:56:17.000 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:working&indent=true&q.op=OR&_=1649485580266} hits=14067 status=0 QTime=0
+2022-04-09 07:56:17.007 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=7
+2022-04-09 07:56:41.009 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:cevid&indent=true&q.op=OR&_=1649485580266} hits=0 status=0 QTime=1
+2022-04-09 07:56:41.254 INFO  (qtp1803093683-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=0
+2022-04-09 07:56:41.259 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=4
+2022-04-09 07:56:41.263 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:cevid&indent=true&q.op=OR&_=1649485580266} hits=0 status=0 QTime=0
+2022-04-09 07:56:45.593 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&_=1649485580266} hits=0 status=0 QTime=207
+2022-04-09 07:56:45.965 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=0
+2022-04-09 07:56:45.968 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=2
+2022-04-09 07:56:45.980 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&_=1649485580266} hits=0 status=0 QTime=15
+2022-04-09 08:13:55.790 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&facet=true&_=1649485580266} hits=10970 status=0 QTime=26
+2022-04-09 08:13:56.086 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&facet=true&_=1649485580266} hits=10970 status=0 QTime=1
+2022-04-09 08:13:56.087 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649485580086} status=0 QTime=2
+2022-04-09 08:13:56.113 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649485580087} status=0 QTime=27
+2022-04-09 08:13:58.210 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&facet=true} hits=10970 status=0 QTime=3
+2022-04-09 08:14:16.186 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&facet=true} hits=10970 status=0 QTime=0
+2022-04-09 08:15:17.225 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492117088} status=0 QTime=0
+2022-04-09 08:15:17.230 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492117089} status=0 QTime=2
+2022-04-09 08:15:17.232 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&facet=true&_=1649492117185} hits=10970 status=0 QTime=0
+2022-04-09 08:15:29.602 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&facet=true&_=1649492117185} hits=6192 status=0 QTime=46
+2022-04-09 08:15:29.917 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492117088} status=0 QTime=0
+2022-04-09 08:15:29.924 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&facet=true&_=1649492117185} hits=6192 status=0 QTime=1
+2022-04-09 08:15:29.926 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492117089} status=0 QTime=4
+2022-04-09 08:15:32.019 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&facet=true} hits=6192 status=0 QTime=0
+2022-04-09 08:15:39.281 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&facet=true} hits=6192 status=0 QTime=0
+2022-04-09 08:18:51.718 INFO  (qtp1803093683-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492331581} status=0 QTime=3
+2022-04-09 08:18:51.727 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&facet=true&_=1649492331678} hits=6192 status=0 QTime=14
+2022-04-09 08:18:51.737 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492331582} status=0 QTime=23
+2022-04-09 08:19:08.140 INFO  (qtp1803093683-17) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492331678} hits=0 status=0 QTime=19
+2022-04-09 08:19:08.483 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492331581} status=0 QTime=0
+2022-04-09 08:19:08.491 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492331582} status=0 QTime=6
+2022-04-09 08:19:17.546 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492331678} hits=66856 status=0 QTime=5
+2022-04-09 08:19:17.833 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492331581} status=0 QTime=0
+2022-04-09 08:19:17.840 INFO  (qtp1803093683-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492331582} status=0 QTime=7
+2022-04-09 08:19:17.842 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492331678} hits=66856 status=0 QTime=2
+2022-04-09 08:19:22.473 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true} hits=66856 status=0 QTime=2
+2022-04-09 08:19:28.953 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true} hits=66856 status=0 QTime=2
+2022-04-09 08:21:37.664 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492497379} status=0 QTime=1
+2022-04-09 08:21:37.667 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492497632} hits=66856 status=0 QTime=2
+2022-04-09 08:21:37.671 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492497379} status=0 QTime=8
+2022-04-09 08:21:54.976 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492497632} hits=10970 status=0 QTime=3
+2022-04-09 08:21:55.266 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492497379} status=0 QTime=0
+2022-04-09 08:21:55.270 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492497379} status=0 QTime=4
+2022-04-09 08:21:55.284 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492497632} hits=10970 status=0 QTime=1
+2022-04-09 08:22:15.805 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492497632} hits=6192 status=0 QTime=2
+2022-04-09 08:22:16.154 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492497379} status=0 QTime=2
+2022-04-09 08:22:16.157 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492497632} hits=6192 status=0 QTime=4
+2022-04-09 08:22:16.158 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492497379} status=0 QTime=7
+2022-04-09 08:22:22.073 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=0&_=1649492497632} hits=6192 status=0 QTime=0
+2022-04-09 08:22:22.386 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492497379} status=0 QTime=0
+2022-04-09 08:22:22.388 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492497379} status=0 QTime=3
+2022-04-09 08:22:22.389 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=0&_=1649492497632} hits=6192 status=0 QTime=0
+2022-04-09 08:22:25.890 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=10&_=1649492497632} hits=6192 status=0 QTime=1
+2022-04-09 08:22:26.199 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492497379} status=0 QTime=0
+2022-04-09 08:22:26.201 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=10&_=1649492497632} hits=6192 status=0 QTime=0
+2022-04-09 08:22:26.205 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492497379} status=0 QTime=4
+2022-04-09 08:22:28.067 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=10&_=1649492497632} hits=6192 status=0 QTime=0
+2022-04-09 08:22:28.930 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=10&_=1649492497632} hits=6192 status=0 QTime=0
+2022-04-09 08:22:40.299 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=10} hits=6192 status=0 QTime=0
+2022-04-09 08:22:45.038 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=10} hits=6192 status=0 QTime=0
+2022-04-09 08:23:07.714 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492587394} status=0 QTime=0
+2022-04-09 08:23:07.721 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492587394} status=0 QTime=5
+2022-04-09 08:23:07.721 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:"work+from+home"&indent=true&q.op=OR&rows=0&_=1649492587681} hits=6192 status=0 QTime=1
+2022-04-09 08:23:29.993 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&rows=0&_=1649492587681} hits=0 status=0 QTime=29
+2022-04-09 08:23:30.385 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492587394} status=0 QTime=0
+2022-04-09 08:23:30.396 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492587394} status=0 QTime=4
+2022-04-09 08:23:30.421 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&rows=0&_=1649492587681} hits=0 status=0 QTime=16
+2022-04-09 08:23:33.310 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&rows=0} hits=0 status=0 QTime=10
+2022-04-09 08:23:38.537 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&rows=0} hits=0 status=0 QTime=9
+2022-04-09 08:27:03.174 INFO  (qtp1803093683-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492823053} status=0 QTime=3
+2022-04-09 08:27:03.194 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492823054} status=0 QTime=24
+2022-04-09 08:27:03.213 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/spell params={q=text:cevid&indent=true&q.op=OR&rows=0&_=1649492823137} hits=0 status=0 QTime=43
+2022-04-09 08:27:17.751 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492823137} hits=0 status=0 QTime=7
+2022-04-09 08:27:18.035 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492823053} status=0 QTime=0
+2022-04-09 08:27:18.053 INFO  (qtp1803093683-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492823054} status=0 QTime=6
+2022-04-09 08:27:20.178 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492823137} hits=66856 status=0 QTime=6
+2022-04-09 08:27:20.465 INFO  (qtp1803093683-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492823053} status=0 QTime=0
+2022-04-09 08:27:20.469 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649492823137} hits=66856 status=0 QTime=3
+2022-04-09 08:27:20.472 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492823054} status=0 QTime=7
+2022-04-09 08:27:41.463 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask&facet.field=keyword&indent=true&q.op=OR&rows=10&facet=true&_=1649492823137} hits=4071 status=0 QTime=7
+2022-04-09 08:27:41.874 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492823053} status=0 QTime=0
+2022-04-09 08:27:41.887 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask&facet.field=keyword&indent=true&q.op=OR&rows=10&facet=true&_=1649492823137} hits=4071 status=0 QTime=7
+2022-04-09 08:27:41.892 INFO  (qtp1803093683-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492823054} status=0 QTime=13
+2022-04-09 08:28:01.811 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask%0aauthor_id:1213776711604568064&facet.field=keyword&indent=true&q.op=OR&rows=10&facet=true&_=1649492823137} hits=4073 status=0 QTime=46
+2022-04-09 08:28:02.162 INFO  (qtp1803093683-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492823053} status=0 QTime=0
+2022-04-09 08:28:02.167 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask%0aauthor_id:1213776711604568064&facet.field=keyword&indent=true&q.op=OR&rows=10&facet=true&_=1649492823137} hits=4073 status=0 QTime=1
+2022-04-09 08:28:02.170 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492823054} status=0 QTime=4
+2022-04-09 08:28:21.748 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask%0aauthor_id:1213776711604568064&indent=true&q.op=OR&rows=10&_=1649492823137} hits=4073 status=0 QTime=0
+2022-04-09 08:28:22.047 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649492823053} status=0 QTime=0
+2022-04-09 08:28:22.050 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649492823054} status=0 QTime=3
+2022-04-09 08:28:22.054 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask%0aauthor_id:1213776711604568064&indent=true&q.op=OR&rows=10&_=1649492823137} hits=4073 status=0 QTime=0
+2022-04-09 08:29:21.827 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask%0aauthor_id:1213776711604568064&indent=true&q.op=OR&rows=10} hits=4073 status=0 QTime=0
+2022-04-09 08:29:36.030 INFO  (qtp1803093683-52) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:+wearamask%0aauthor_id:1213776711604568064&indent=true&q.op=OR&rows=10} hits=4073 status=0 QTime=0
+2022-04-09 17:04:32.623 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649523871767} status=0 QTime=11
+2022-04-09 17:04:32.673 INFO  (qtp1803093683-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=67
+2022-04-09 17:04:32.697 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=11
+2022-04-09 17:04:35.218 INFO  (qtp1803093683-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649523871767} status=0 QTime=0
+2022-04-09 17:04:35.233 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=9
+2022-04-09 17:04:35.253 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/replication params={wt=json&command=details&_=1649523875174} status=0 QTime=25
+2022-04-09 17:04:35.254 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1649523875173} status=0 QTime=27
+2022-04-09 17:04:35.264 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/system params={wt=json&_=1649523875173} status=0 QTime=16
+2022-04-09 17:04:35.281 INFO  (qtp1803093683-22) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1649523871767&ts=1649523871767} status=503 QTime=2
+2022-04-09 17:04:36.703 INFO  (qtp1803093683-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649523871767} status=0 QTime=0
+2022-04-09 17:04:36.711 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=5
+2022-04-09 17:04:38.169 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649523876679} hits=66856 status=0 QTime=4
+2022-04-09 17:04:38.487 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649523871767} status=0 QTime=0
+2022-04-09 17:04:38.492 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1649523876679} hits=66856 status=0 QTime=1
+2022-04-09 17:04:38.501 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=14
+2022-04-09 17:06:32.130 INFO  (qtp1803093683-23) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649523876679} hits=10970 status=0 QTime=29
+2022-04-09 17:06:32.503 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649523871767} status=0 QTime=2
+2022-04-09 17:06:32.506 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&_=1649523876679} hits=10970 status=0 QTime=1
+2022-04-09 17:06:32.529 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=27
+2022-04-09 17:06:39.091 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&rows=100&_=1649523876679} hits=10970 status=0 QTime=32
+2022-04-09 17:06:39.750 INFO  (qtp1803093683-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649523871767} status=0 QTime=0
+2022-04-09 17:06:39.754 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&rows=100&_=1649523876679} hits=10970 status=0 QTime=0
+2022-04-09 17:06:39.772 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649523871767} status=0 QTime=20
+2022-04-09 17:06:45.969 INFO  (qtp1803093683-50) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&indent=true&q.op=OR&rows=100} hits=10970 status=0 QTime=1
+2022-04-09 18:09:32.138 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649527771396} status=0 QTime=3
+2022-04-09 18:09:32.175 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649527771396} status=0 QTime=39
+2022-04-09 18:09:32.194 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649527771396} status=0 QTime=14
+2022-04-09 18:09:34.363 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649527771396} status=0 QTime=0
+2022-04-09 18:09:34.378 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649527771396} status=0 QTime=4
+2022-04-09 18:09:34.384 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1649527774350} status=0 QTime=4
+2022-04-09 18:09:34.384 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/replication params={wt=json&command=details&_=1649527774351} status=0 QTime=1
+2022-04-09 18:09:34.414 INFO  (qtp1803093683-21) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1649527771397&ts=1649527771397} status=503 QTime=0
+2022-04-09 18:09:34.419 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/admin/system params={wt=json&_=1649527774350} status=0 QTime=21
+2022-04-09 18:09:36.415 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649527771396} status=0 QTime=0
+2022-04-09 18:09:36.451 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649527771396} status=0 QTime=28
+2022-04-09 18:09:52.494 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&facet=true&_=1649527776377} hits=10970 status=0 QTime=25
+2022-04-09 18:09:52.822 INFO  (qtp1803093683-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649527771396} status=0 QTime=0
+2022-04-09 18:09:52.835 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649527771396} status=0 QTime=11
+2022-04-09 18:09:52.836 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&facet=true&_=1649527776377} hits=10970 status=0 QTime=1
+2022-04-09 18:09:58.778 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649527776377} hits=10970 status=0 QTime=0
+2022-04-09 18:09:59.203 INFO  (qtp1803093683-51) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1649527771396} status=0 QTime=0
+2022-04-09 18:09:59.208 INFO  (qtp1803093683-48) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true&_=1649527776377} hits=10970 status=0 QTime=2
+2022-04-09 18:09:59.216 INFO  (qtp1803093683-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1649527771396} status=0 QTime=10
+2022-04-09 18:10:05.945 INFO  (qtp1803093683-51) [   x:tweet] o.a.s.c.S.Request [tweet]  webapp=/solr path=/select params={q=text:covid&facet.field=keyword&indent=true&q.op=OR&rows=0&facet=true} hits=10970 status=0 QTime=1
+2022-04-10 13:53:15.920 INFO  (qtp1803093683-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=106
+2022-04-10 13:53:15.990 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.tweet tag=null
+2022-04-10 13:53:15.991 INFO  (qtp1803093683-54) [   x:tweet] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@11741957: rootName = null, domain = solr.core.tweet, service url = null, agent id = null] for registry solr.core.tweet/com.codahale.metrics.MetricRegistry@769829cc
+2022-04-10 13:53:16.117 INFO  (qtp1803093683-54) [   ] o.a.s.c.SolrCore [tweet]  CLOSING SolrCore org.apache.solr.core.SolrCore@1caa0fc8
+2022-04-10 13:53:16.119 INFO  (qtp1803093683-54) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.tweet tag=SolrCore@1caa0fc8
+2022-04-10 13:53:16.136 INFO  (qtp1803093683-54) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-04-10 13:53:16.526 INFO  (qtp1803093683-54) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={deleteInstanceDir=true&core=tweet&deleteDataDir=true&action=UNLOAD&wt=json&deleteIndex=true} status=0 QTime=558
+2022-04-10 13:53:26.332 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@1a69561c{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-04-10 13:53:26.332 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2022-04-10 13:53:26.343 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1001284816
+2022-04-10 13:53:26.373 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-04-10 13:53:26.373 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@f425231: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@14a273d1
+2022-04-10 13:53:26.383 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-04-10 13:53:26.383 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@3625a016: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@1546b6a9
+2022-04-10 13:53:26.385 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-04-10 13:53:26.385 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@267cde2e: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@d35c21d
+2022-04-10 13:53:26.449 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@1556f2dd{/solr,null,STOPPED}{/Users/lili/CZ4034-Information-Retrieval-Assignment/backend/solr-8.11.1/server/solr-webapp/webapp}
