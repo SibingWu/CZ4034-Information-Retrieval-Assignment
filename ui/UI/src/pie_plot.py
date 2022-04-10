@@ -39,6 +39,7 @@ def draw_sentiment_pie_chart(json_record):
         sentiments.append(sentiment_dict[sentiment])
         counts.append(count)
 
+    plt.rcParams['font.size'] = 40
     plt.switch_backend('AGG')
     plt.title("Keywords")
 
@@ -49,7 +50,7 @@ def draw_sentiment_pie_chart(json_record):
         autopct='%.2f%%',  # 格式化输出百分比
     )
     plt.legend(loc='best')
-    
+
     #plt.tick_params(label_size = 23)
 
     graph = get_graph()

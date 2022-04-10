@@ -32,12 +32,13 @@ def draw_count_bar_chart(json_record):
         keywords.append(keyword)
         counts.append(count)
 
+    plt.rcParams['font.size'] = 30
     plt.switch_backend('AGG')
     plt.title("Keywords")
     
-    fig, ax = plt.subplots(figsize=(20, 10), dpi=100)
+    plt.subplots(figsize=(100, 20), dpi=100)
     plt.bar(keywords, counts, tick_label=keywords)
-    
+
     #plt.tick_params(label_size = 23)
 
     # 显示数据标签
@@ -49,6 +50,7 @@ def draw_count_bar_chart(json_record):
             ha='center',
             va='bottom'
         )
+    #plt.xticks(rotation=90)
     
 
     graph = get_graph()

@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<!-- <head> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- <style>
 * {
   box-sizing: border-box;
 }
@@ -24,24 +24,24 @@
 }
 </style>
 </head>
-<body>
+<body> -->
 
 
-<div class="row">
-  <div class="column" >
+<!-- <div class="row">
+  <div class="column" > -->
     <h2>This bar graph shows number of tweets by keywords</h2>
     {% if bar_chart %}
-    <img src="data: image/png;base64, {{bar_chart|safe}}" style="width:600px;height:400px;">
+    <img src="data: image/png;base64, {{bar_chart|safe}}" style="width:1000px;height:250px;">
     {% endif %}
-  </div>
+  <!-- </div> -->
 
-  <div class="column">
+  <!-- <div class="column"> -->
     <h2>This pie chart shows the percentage of sentiment tweets</h2>
     {% if pie_chart %}
     <img src="data: image/png;base64, {{pie_chart|safe}}" style="width: 500px;height: 500px;">
     {% endif %}
-  </div>
-</div>
+  <!-- </div> -->
+<!-- </div> -->
 
 </body>
 </html>
