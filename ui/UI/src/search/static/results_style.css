@@ -1,11 +1,24 @@
+body {
+    background-color: aliceblue;
+}
+
+button,
+input {
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-radius: 5px;
+    font-weight: bold;
+    border-color: aliceblue;
+}
+
 .line {
-height: 10px;
+    height: 10px;
 }
 
 .time {
-    font-style: italic;
     font-size: medium;
 }
+
 .content {
     font-size: larger;
 }
@@ -18,4 +31,13 @@ height: 10px;
 .spellCheck {
     font-style: italic;
     font-weight: bold;
+}
+
+.tweet {
+    margin: 8px;
+    padding: 5px;
+    border-style: groove;
+    border: 2px groove cornflowerblue;
+    box-shadow: 4px 4px 2px cornflowerblue;
+
 }

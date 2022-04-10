@@ -10,10 +10,11 @@
   <link rel="stylesheet" href={% static 'results_style.css' %}> 
 </head>
 
+
 <body>
   <h2>COVID TWEETS SEARCH ENGINE</h2>
   <!-- put in the query word -->
-  <form type="get" action="/home/" style="margin: 0">  
+  <form type="get" action="/home/" style="margin: 0">
     <button id="home" type="home">Home!</button>
   </form>
 
@@ -43,28 +44,27 @@
   <div class="line"></div>
 
   <form type="get" action="/charts/" style="margin: 0">
-    
+
     <button id="charts" type="submit" name="charts">Show charts!</button>
 
   </form>
-  
-  <div class="line"></div>
+
 
   <div class="outer">
     {% block content %}
-    
+
     {% endblock %}
 
   </div>
 
 
   <div class="outer">
-    <h2 class="spellCheck">Too few results? Spellcheck:</h2>
+    <h3 class="spellCheck">Too few results? Spellcheck:</h3>
     {% for key, values in spellchecks.items %}
-    <h3>{{key}}: </h3>
-      {% for v in values %}
-      <p>{{v}}</p>
-      {% endfor %}
+    <h4>{{key}}: </h4>
+    {% for v in values %}
+    <p>{{v}}</p>
+    {% endfor %}
 
     {% endfor %}
   </div>
