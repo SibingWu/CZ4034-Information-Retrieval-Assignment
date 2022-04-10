@@ -39,7 +39,7 @@ def results(request):
 		if (len(tweets) < 20):
 			print(len(tweets))
 			json_data = query_spell_check(query)
-			return render(request, 'results.html', {'query': query, 'results':tweets, 'spellchecks':json_data, 'option': option})
+			return render(request, 'results.html', {'query': query, 'results':tweets, 'spellchecks':json_data})
         
 		return render(request, 'filters.html', {'query': query, 'results':tweets})
 	
